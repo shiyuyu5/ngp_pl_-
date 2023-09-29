@@ -79,7 +79,7 @@ This implementation has **strict** requirements due to dependencies on other lib
 
     * Install core requirements by ~~~pip install -r requirements.txt~~, 应该缺什么包安装什么包！其中
       ```sh
-         pip install pytorch-lightning==1.8
+      pip install pytorch-lightning==1.8
       ```
 
 # :books: Supported Datasets
