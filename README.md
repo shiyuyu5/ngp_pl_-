@@ -77,7 +77,7 @@ This implementation has **strict** requirements due to dependencies on other lib
       pip install models/csrc/
       ```
 
-    * Install core requirements by ~~~pip install -r requirements.txt~~, 应该缺什么包安装什么包！其中
+    * Install core requirements by ~~~pip install -r requirements.txt~~, 应该缺什么包安装什么包！(只安装默认即可，不要版本号)，但是其中
       ```sh
       pip install pytorch-lightning==1.8
       ```
