@@ -55,7 +55,7 @@ This implementation has **strict** requirements due to dependencies on other lib
     * Install `torch-scatter` following their [instruction](https://github.com/rusty1s/pytorch_scatter#installation) (pip install torch-scatter -f https://data.pyg.org/whl/torch-1.13.0+cu117.html)
     * Install `tinycudann` following their [instruction](https://github.com/NVlabs/tiny-cuda-nn#pytorch-extension) (pytorch extension) (pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch)
     * Install `apex` following their [instruction](https://github.com/NVIDIA/apex#linux)
-      ```
+      ```sh
       git clone https://github.com/NVIDIA/apex
       cd apex
       # if pip >= 23.1 (ref: https://pip.pypa.io/en/stable/news/#v23-1) which supports multiple `--config-settings` with the same key...  (ok)
