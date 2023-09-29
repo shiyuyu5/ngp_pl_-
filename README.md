@@ -46,15 +46,23 @@ This implementation has **strict** requirements due to dependencies on other lib
 * NVIDIA GPU with Compute Compatibility >= 86 and memory > 24GB (Tested with RTX 3090), CUDA 11.7 (might work with older version)
 * 24GB RAM (in order to load full size images)
 
-## Software
+## Software(my 3090GPU)
 
 * Clone this repo by `git clone https://github.com/kwea123/ngp_pl`
 * Python>=3.8 (installation via [anaconda](https://www.anaconda.com/distribution/) is recommended, use `conda create -n ngp_pl python=3.10` to create a conda environment and activate it by `conda activate ngp_pl`)
 * Python libraries
     * Install pytorch by `pip install torch==1.13.0 --extra-index-url https://download.pytorch.org/whl/cu117`
-    * Install `torch-scatter` following their [instruction](https://github.com/rusty1s/pytorch_scatter#installation) pip install torch-scatter -f https://data.pyg.org/whl/torch-1.13.0+cu117.html
-    * Install `tinycudann` following their [instruction](https://github.com/NVlabs/tiny-cuda-nn#pytorch-extension) (pytorch extension)
+    * Install `torch-scatter` following their [instruction](https://github.com/rusty1s/pytorch_scatter#installation) (pip install torch-scatter -f https://data.pyg.org/whl/torch-1.13.0+cu117.html)
+    * Install `tinycudann` following their [instruction](https://github.com/NVlabs/tiny-cuda-nn#pytorch-extension) (pytorch extension) (pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch)
     * Install `apex` following their [instruction](https://github.com/NVIDIA/apex#linux)
+      '''
+      git clone https://github.com/NVIDIA/apex
+      cd apex
+      # if pip >= 23.1 (ref: https://pip.pypa.io/en/stable/news/#v23-1) which supports multiple `--config-settings` with the same key...  (ok)
+      pip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --config-settings "--build-option=--cpp_ext" --config-settings "--build-option=--cuda_ext" ./
+      # otherwise
+      pip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+      '''
     * Install core requirements by `pip install -r requirements.txt`
 
 
