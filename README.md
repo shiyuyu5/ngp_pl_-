@@ -40,6 +40,25 @@ This implementation has **strict** requirements due to dependencies on other lib
     * Install `apex` following their [instruction](https://github.com/NVIDIA/apex#linux)
     * Install core requirements by `pip install -r requirements.txt`
 
+## Hardware(my 3090GPU)
+
+* OS: Ubuntu 20.04
+* NVIDIA GPU with Compute Compatibility >= 86 and memory > 24GB (Tested with RTX 3090), CUDA 11.7 (might work with older version)
+* 24GB RAM (in order to load full size images)
+
+## Software
+
+* Clone this repo by `git clone https://github.com/kwea123/ngp_pl`
+* Python>=3.8 (installation via [anaconda](https://www.anaconda.com/distribution/) is recommended, use `conda create -n ngp_pl python=3.10` to create a conda environment and activate it by `conda activate ngp_pl`)
+* Python libraries
+    * Install pytorch by `pip install torch==1.13.0 --extra-index-url https://download.pytorch.org/whl/cu117`
+    * Install `torch-scatter` following their [instruction](https://github.com/rusty1s/pytorch_scatter#installation) pip install torch-scatter -f https://data.pyg.org/whl/torch-1.13.0+cu117.html
+    * Install `tinycudann` following their [instruction](https://github.com/NVlabs/tiny-cuda-nn#pytorch-extension) (pytorch extension)
+    * Install `apex` following their [instruction](https://github.com/NVIDIA/apex#linux)
+    * Install core requirements by `pip install -r requirements.txt`
+
+
+
 * Cuda extension: Upgrade `pip` to >= 22.1 and run `pip install models/csrc/` (please run this each time you `pull` the code)
 
 # :books: Supported Datasets
