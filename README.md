@@ -72,11 +72,15 @@ This implementation has **strict** requirements due to dependencies on other lib
       # otherwise
       pip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --global-option="--cpp_ext" --global-option="--cuda_ext" ./
       ```
-    * Install core requirements by `pip install -r requirements.txt`
+    * Cuda extension: Upgrade `pip` to >= 22.1 and run  (please run this each time you `pull` the code)
+      ```sh
+      pip install models/csrc/
+      ```
 
-
-
-* Cuda extension: Upgrade `pip` to >= 22.1 and run `pip install models/csrc/` (please run this each time you `pull` the code)
+    * Install core requirements by ~~~pip install -r requirements.txt~~, 应该缺什么包安装什么包！其中
+      ```sh
+         pip install pytorch-lightning==1.8
+      ```
 
 # :books: Supported Datasets
 
