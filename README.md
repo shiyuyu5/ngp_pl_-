@@ -51,9 +51,18 @@ This implementation has **strict** requirements due to dependencies on other lib
 * Clone this repo by `git clone https://github.com/kwea123/ngp_pl`
 * Python>=3.8 (installation via [anaconda](https://www.anaconda.com/distribution/) is recommended, use `conda create -n ngp_pl python=3.10` to create a conda environment and activate it by `conda activate ngp_pl`)
 * Python libraries
-    * Install pytorch by `pip install torch==1.13.0 --extra-index-url https://download.pytorch.org/whl/cu117`
-    * Install `torch-scatter` following their [instruction](https://github.com/rusty1s/pytorch_scatter#installation) (pip install torch-scatter -f https://data.pyg.org/whl/torch-1.13.0+cu117.html)
-    * Install `tinycudann` following their [instruction](https://github.com/NVlabs/tiny-cuda-nn#pytorch-extension) (pytorch extension) (pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch)
+    * Install pytorch by
+      ```sh
+      pip install torch==1.13.0 --extra-index-url https://download.pytorch.org/whl/cu117
+      ```
+    * Install `torch-scatter` following their [instruction](https://github.com/rusty1s/pytorch_scatter#installation)
+      ```sh
+      pip install torch-scatter -f https://data.pyg.org/whl/torch-1.13.0+cu117.html
+      ```    
+    * Install `tinycudann` following their [instruction](https://github.com/NVlabs/tiny-cuda-nn#pytorch-extension) (pytorch extension)
+      ```sh
+      pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch)
+      ```
     * Install `apex` following their [instruction](https://github.com/NVIDIA/apex#linux)
       ```sh
       git clone https://github.com/NVIDIA/apex
