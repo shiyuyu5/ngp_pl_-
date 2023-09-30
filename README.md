@@ -89,7 +89,6 @@ This implementation has **strict** requirements due to dependencies on other lib
       pip install pytorch-lightning==1.8
       pip install "pyglet<2"
       pip install einops matplotlib kornia opencv-python imageio dearpygui scipy pymcubes trimesh plotly
-      
       ```
 
 # :books: Supported Datasets
