@@ -50,6 +50,10 @@ This implementation has **strict** requirements due to dependencies on other lib
 
 * Clone this repo by `git clone https://github.com/kwea123/ngp_pl`
 * Python>=3.8 (installation via [anaconda](https://www.anaconda.com/distribution/) is recommended, use `conda create -n ngp_pl python=3.10` to create a conda environment and activate it by `conda activate ngp_pl`)
+     ```sh
+     conda create -n ngp_pl python=3.10
+     conda activate ngp_pl
+     ```
 * Python libraries
     * Install pytorch by
       ```sh
@@ -61,7 +65,7 @@ This implementation has **strict** requirements due to dependencies on other lib
       ```    
     * Install `tinycudann` following their [instruction](https://github.com/NVlabs/tiny-cuda-nn#pytorch-extension) (pytorch extension)
       ```sh
-      pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch)
+      pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
       ```
     * Install `apex` following their [instruction](https://github.com/NVIDIA/apex#linux)
       ```sh
@@ -76,7 +80,6 @@ This implementation has **strict** requirements due to dependencies on other lib
       ```sh
       pip install models/csrc/
       ```
-
     * Install core requirements by ~~~pip install -r requirements.txt~~, 应该缺什么包安装什么包！(只安装默认即可，不要版本号)，但是其中
       ```sh
       pip install pytorch-lightning==1.8
