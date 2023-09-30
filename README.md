@@ -72,17 +72,20 @@ This implementation has **strict** requirements due to dependencies on other lib
       git clone https://github.com/NVIDIA/apex
       cd apex
       # if pip >= 23.1 (ref: https://pip.pypa.io/en/stable/news/#v23-1) which supports multiple `--config-settings` with the same key...  (ok)
+      pip install packaging
       pip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --config-settings "--build-option=--cpp_ext" --config-settings "--build-option=--cuda_ext" ./
       # otherwise
       pip install -v --disable-pip-version-check --no-cache-dir --no-build-isolation --global-option="--cpp_ext" --global-option="--cuda_ext" ./
       ```
     * Cuda extension: Upgrade `pip` to >= 22.1 and run  (please run this each time you `pull` the code)
       ```sh
+      cd ../ngp_pl/
       pip install models/csrc/
       ```
     * Install core requirements by ~~~pip install -r requirements.txt~~, 应该缺什么包安装什么包！(只安装默认即可，不要版本号)，但是其中
       ```sh
       pip install pytorch-lightning==1.8
+      pip install einops matplotlib kornia opencv-python imageio
       ```
 
 # :books: Supported Datasets
