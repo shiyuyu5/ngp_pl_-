@@ -54,6 +54,7 @@ This implementation has **strict** requirements due to dependencies on other lib
      conda create -n ngp_pl python=3.10
      conda activate ngp_pl
      conda create -n ngp_pl_2 --clone ngp_pl
+     conda create -n remove --all
      ```
 * Python libraries
     * Install pytorch by
